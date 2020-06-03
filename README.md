@@ -1,4 +1,4 @@
-# contenidoCursoFrontEnd
+# Ejemplos del curso de programación Front-end
 
 Querido estudiante
 
