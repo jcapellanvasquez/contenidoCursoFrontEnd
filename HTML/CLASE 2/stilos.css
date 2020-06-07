@@ -1,0 +1,29 @@
+* {
+    font-size: 16px;
+}
+
+/*Selector de tipo .class*/
+.texto-rojo {
+    color: red;
+
+    /*Esta unidad (em) de medida es porcentual al tamano por defecto aplicado a las fuentes*/
+    font-size: 1em;
+}
+
+.texto-linea {
+    text-decoration: underline;
+}
+
+/*Selector de tipo #id, identificador unico*/
+#parrafo {
+    font-family: Verdana;
+    font-size: 22px;
+    /*Esta propiedad de color estamos utilizando la funcion rgb que tiene css para gener colores */
+    color: rgb(177, 177, 177);
+}
+
+/*Selector de tipo elementos, con la coma (,) vamos creando un grupo de elementos ha afectar*/
+p,label {
+    opacity: 0.8;
+}
+
