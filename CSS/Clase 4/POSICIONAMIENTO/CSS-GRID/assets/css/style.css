@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #DCE0E5;
+}
+
+body {
+    background-color: #DCE0E5;
+    font-family: Verdana;
+}
+
+h2 {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1vh;
+    color: #222222;
+    height: 7vh;
+}
+
+.contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 30px;
+    grid-template-areas:
+            "header header header"
+            "menu contenido toolbar"
+            "menu contenido toolbar"
+            "menu contenido toolbar"
+            "menu footer footer";
+
+    grid-gap: 10px;
+    height: 92vh;
+    padding: 0 15px;
+}
+
+.contenedor > * {
+    background-color: #6E9CC4;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cabecera {
+    background-color: #FFBA08;
+    color: #222222;
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+.toolbar {
+    grid-area: toolbar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.cabecera, .pie-pagina {
+}
+
+.seccion, .barra-tarea {
+}
+
+.barra-tarea {
+}
+
+.pie-pagina {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        grid-template-areas:
+                "header header header"
+                "menu contenido contenido"
+                "menu contenido contenido"
+                "menu contenido contenido"
+                "menu contenido contenido"
+                "menu toolbar toolbar"
+
+    }
+
+    .footer {
+        display: none;
+    }
+
+    h2 {
+        margin-bottom: 1vh;
+        min-height: 100px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
