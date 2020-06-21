@@ -23,7 +23,7 @@ h2 {
     padding: 0 15px;
 }
 
-.contenedor > *  {
+.contenedor > * {
     background-color: #6E9CC4;
     border-radius: 5px;
     margin: 5px;
@@ -55,4 +55,35 @@ h2 {
     min-height: 60px;
     float: left;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .seccion, .barra-tarea {
+        width: 100%;
+        min-height: 200px;
+        float: left;
+    }
+
+    .barra-tarea {
+        float: left;
+        min-height: 100px;
+    }
+
+    .pie-pagina {
+        display: none;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { }
 
