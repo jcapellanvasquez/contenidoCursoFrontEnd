@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #DCE0E5;
+}
+
+body {
+    background-color: #DCE0E5;
+    font-family: Verdana;
+}
+
+h2 {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    padding: 0 15px;
+    display: flex;
+
+    /*Esta propiedad se usa en conjunto con display: flex;*/
+    /*nos permite organizar horizontalmente los elementos dentro de un contenedor*/
+    justify-content: center;
+
+
+    /*Esta propiedad se usa en conjunto con display: flex;*/
+    /*nos permite organizar verticalmente los elementos dentro de un contenedor*/
+    align-items: center;
+
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    /*flex-flow: wrap column;*/
+}
+
+.contenedor > * {
+    background-color: #6E9CC4;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    flex-grow: 1;
+
+    /*Atajo para agrupar las siguientes 3 propiedades*/
+    /*flex: flex-grow flex-shrink flex-basis*/
+}
+
+.elemento {
+    flex-basis: 150px;
+    height: 150px;
+    /*width: 150px;*/
+}
+
+.elemento1 {
+}
+
+.elemento3 {
+    /*flex-grow: 4;*/
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-content: center;
+}
+
+.elemento3 > p:nth-child(odd) {
+    width: 50%;
+}
+
+.elemento2 {
+    flex-shrink: 3;
+}
+
+.elemento5 {
+
+    /*Esta propiedad organiza el elemento donde se aplica pudiendo asi */
+    /*poner una organizacion diferente de la que tenga el contedor*/
+    /*align-self: end;*/
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { }
+
