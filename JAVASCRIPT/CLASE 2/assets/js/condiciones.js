@@ -1,7 +1,5 @@
 // Ejercicios de condiciones
 
-//Borrar esta linea al terminar
-console.clear();
 let valorNumerico1 = 200;
 let valorNumerico2 = 100;
 
@@ -42,6 +40,9 @@ if (valorNumerico1 !== 0 && valorNumerico2 !== 0 && valorNumerico1 > valorNumeri
     console.log("Caso de if con operadores logicos");
 }
 
+// En este ejercicio probamos como usar el else if
+// Cuando se usa else if la evuluaciones se hacen en serie, una despues de otra y solo se ejecutara
+// la que cumpla la condicion dada
 let numero = 90;
 console.log("Uso del else if:");
 
