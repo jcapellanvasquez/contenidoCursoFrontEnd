@@ -1,47 +1,113 @@
-// Ejemplo de comentario de una linea
-// se utiliza el //
+$(document).ready((e) => {
+    let tareas = [];
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-// Ejemplo de comentario de varias lienas
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-/*
-    Comentario de
-    varias lineas
-*/
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-// Ejemplos de variables
-let miVariable = "Julio";
-let mivariable = "Capellan";
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-let nombre = "Julio";
-let apellido = "Capellan";
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-console.log("Ejemplos de variables")
-console.log(miVariable);
-console.log(mivariable);
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-miVariable = 89.10;
-console.log(miVariable)
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-// Ejemplos de constantes
-const MI_CONSTANTE = "nombre de la Aplicacion";
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-console.log("Ejemplos de constantes");
-console.info(MI_CONSTANTE);
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-// EJemplo de tipos de datos
-let edad = 29;
-let devuelta = 15.29;
-let resultado = Math.round(15.29); //  Metodo de la clase Math para redondear valores
-console.log("Ejemplo de tipos de datos");
-console.log(resultado);
-console.log(nombre + apellido); // Ejemplo para concatenar cadenas
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
-let variableBooleana = false;
-let variableBooleana2 = true;
-let variableBooleana3 = null;
-let esMayorDeEdad = true;
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
+    tareas.push({
+        titulo: 'Preparar clase',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        estado: false,
+        fecha: new Date('2019-04-25') // Este
+    });
 
+    $('#btn-todo').click(function (e) {
+        let imagenFondo = $("div.sin-tareas");
+        imagenFondo.addClass("ocultar");
 
+        for (let i = 0; i < tareas.length; i++) {
+            let contenedorTareas = $('article.lista-tareas-contenido');
+            contenedorTareas.append(`
+                <div class="card shadow border-0 mb-4">
+                    <div class="card-body tarea-contenedor">
+                        <h2 class="tarea-titulo">${tareas[i].titulo}</h2>
+                        <h2 class="tarea-boton completado-color">
+                            <i class="fa fa-check-circle-o"></i>
+                        </h2>
+                    </div>
+                </div>
+            `);
+        }
+    });
 
+});
