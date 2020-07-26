@@ -1,100 +1,30 @@
 $(document).ready((e) => {
-    let tareas = [];
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
+    function getTareasEnStorage() {
+        let tareas = JSON.parse(localStorage.getItem("tareas"));
+        if (!tareas) {
+            tareas = [];
+            localStorage.setItem("tareas", JSON.stringify(tareas));
+        }
+        return tareas;
+    }
 
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
+    function setTareasEnStorage(tarea) {
+        let tareas = getTareasEnStorage();
+        tareas.push(tarea);
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+    }
+    let tareas = getTareasEnStorage();
 
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
-
-    tareas.push({
-        titulo: 'Preparar clase',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        estado: false,
-        fecha: new Date('2019-04-25') // Este
-    });
+    // window.document
+    // window.localStorage
+    // window.JSON
 
     $('#btn-todo').click(function (e) {
         let imagenFondo = $("div.sin-tareas");
         imagenFondo.addClass("ocultar");
-
+        if (tareas.length == 0) {
+            return;
+        }
         for (let i = 0; i < tareas.length; i++) {
             let contenedorTareas = $('article.lista-tareas-contenido');
             contenedorTareas.append(`
@@ -109,5 +39,6 @@ $(document).ready((e) => {
             `);
         }
     });
+
 
 });
