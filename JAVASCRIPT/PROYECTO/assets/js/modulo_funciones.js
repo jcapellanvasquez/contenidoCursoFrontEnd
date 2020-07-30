@@ -13,5 +13,10 @@ function setTareasEnStorage(tarea) {
     localStorage.setItem("tareas", JSON.stringify(tareas));
 }
 
-export {getTareasEnStorage}
-export {setTareasEnStorage}
+function filtrarCompletadas(tarea) {
+    if (tarea.estado) {
+        return tarea
+    }
+}
+
+export {getTareasEnStorage, setTareasEnStorage,filtrarCompletadas}

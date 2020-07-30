@@ -39,6 +39,13 @@ body {
 .completado-color {
     color: #49DCB1;
 }
+.completado-bg-color {
+    background-color: #49DCB1;
+}
+
+.completado-bg-color:hover {
+    background-color: #49BEAA;
+}
 
 .main-bg-color {
     background-color: #EF767A !important;
