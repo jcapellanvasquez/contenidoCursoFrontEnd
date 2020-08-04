@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -13,7 +14,7 @@
     <div class="row">
         <section class="col-12 bg-1"></section>
         <section class="col-12 bg-2"></section>
-        <section class="lista-tareas shadow">
+        <section class="lista-tareas shadow-1">
             <article class="lista-tareas-titulo">
                 <h3 class="main-color py-4">
                     <i class="fa fa-check-circle-o"></i>
@@ -26,20 +27,19 @@
                         No se encontro ninguna tarea.
                     </p>
                 </div>
-
 <!--                Agregar tareas en esta area-->
 
             </article>
             <article class="lista-tareas-botones">
                 <div class="container-fluid">
-                    <div class="row py-4">
-                        <div class="col-12 col-md-8 pl-4">
-                            <button id="btn-todo" type="button" class="btn btn-light shadow mr-3">Todo</button>
-                            <button id="btn-completada" type="button" class="btn btn-light shadow mr-3">Completada</button>
-                            <button type="button" class="btn btn-light shadow mr-3">Incompletada</button>
+                    <div class="row py-4 justify-content-md-between">
+                        <div class="col-12 col-md-3 d-flex justify-content-between" id="filtros">
+                            <button id="btn-todo" type="button" class="btn btn-light shadow-1">Todo</button>
+                            <button id="btn-completada" type="button" class="btn btn-light shadow-1">Completada</button>
+                            <button id="btn-incompleta" type="button" class="btn btn-light shadow-1">Incompletada</button>
                         </div>
-                        <div class="col-12 col-md-4 pr-4 text-right">
-                            <a href="formulario_tarea.html" class="btn btn-light shadow main-bg-color text-white">Nueva tarea</a>
+                        <div class="col-12 col-md-2">
+                            <a href="formulario_tarea.html" class="btn btn-light shadow-1 main-bg-color main-border-color text-white btn-block movil-mt-2">Nueva tarea</a>
                         </div>
                     </div>
                 </div>

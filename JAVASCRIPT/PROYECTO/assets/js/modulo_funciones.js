@@ -13,10 +13,20 @@ function setTareasEnStorage(tarea) {
     localStorage.setItem("tareas", JSON.stringify(tareas));
 }
 
+function updateTareasEnStorage(tareas) {
+    localStorage.setItem("tareas", JSON.stringify(tareas));
+}
+
 function filtrarCompletadas(tarea) {
     if (tarea.estado) {
         return tarea
     }
 }
 
-export {getTareasEnStorage, setTareasEnStorage,filtrarCompletadas}
+function filtrarInCompletadas(tarea) {
+    if (!tarea.estado) {
+        return tarea
+    }
+}
+
+export {getTareasEnStorage, setTareasEnStorage,filtrarCompletadas,filtrarInCompletadas, updateTareasEnStorage}

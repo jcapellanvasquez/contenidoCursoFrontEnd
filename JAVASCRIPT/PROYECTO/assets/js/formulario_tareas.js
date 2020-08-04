@@ -33,13 +33,15 @@ $(document).ready((e) => {
 
 
         let tarea = {
+            id: tareas.length + 1,
             titulo: titulo.val(),
             descripcion: descripcion.val(),
-            estado: true,
+            estado: false,
             fecha: new Date()
         };
 
         modulo.setTareasEnStorage(tarea);
+        tareas = modulo.getTareasEnStorage();
         titulo.val("");
         descripcion.val("");
         titulo.removeClass('is-valid');
